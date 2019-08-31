@@ -10,11 +10,11 @@ gcloud auth activate-service-account ${ACCOUNT_ID} --key-file ${HOME}/gcloud-ser
 
 gcloud config set project coding-dojo-251421
 
-gcloud --quiet config set container/cluster coding-dojo-andres
+gcloud --quiet config set container/cluster coding-dojo
 
-gcloud config set compute/zone us-west1
+gcloud config set compute/zone us-central1-b
 
-gcloud --quiet container clusters get-credentials coding-dojo-andres
+gcloud --quiet container clusters get-credentials coding-dojo
 
 docker build -t gcr.io/coding-dojo-251421/coding-dojo:$CIRCLE_SHA1 .
 
