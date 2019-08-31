@@ -4,8 +4,8 @@ WORKDIR /home/app
 
 COPY . .
 
-RUN npm install -g yarn && yarn
+RUN npm install
 
 EXPOSE 3000
 
-ENTRYPOINT ["yarn", "start"]
+ENTRYPOINT ["npm", "start"]
